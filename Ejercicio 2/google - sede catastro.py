@@ -12,7 +12,7 @@ while True:
     url = "https://www1.sedecatastro.gob.es/CYCBienInmueble/OVCBusqueda.aspx"
     driver.get(url)
     if len(address) < 1 : break
-    url = serviceurl + urllib.parse.urlencode({'sensor':'false','address':address,'key':'AIzaSyDRDhPvMeDqkojPCVvKeTr471lWM-thXr4'})
+    url = serviceurl + urllib.parse.urlencode({'sensor':'false','address':address,'key':''})
     print('Recuperando los datos de la ciudad', url)
     uh = urllib.request.urlopen(url)
     data = uh.read()
